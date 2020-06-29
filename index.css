@@ -1,0 +1,304 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("Gilroy-ExtraBold.otf");
+}
+  
+@font-face {
+    font-family: "Gilroy Light";
+    src: url("Gilroy-Light.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: rgb(64, 139, 231);
+}
+
+/* For Safari */
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+  
+button, input {
+    font-family: "Gilroy", sans-serif;
+}
+  
+body {
+    font-family: "Gilroy", sans-serif;	
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.nodrag {
+    pointer-events: none;
+}
+
+nav .nodrag {
+    width: 50px;
+    height: auto;
+}
+
+nav .logo {
+    margin-right: 50px;
+    cursor: pointer;
+    transition: .3s;
+    width: fit-content;
+    height: fit-content;
+}
+
+nav .logo:hover, nav input:hover, .ca:hover, .headcontentyeah .frontbutton:hover, .threebuttons .bluebtn:hover {
+    transform: translateY(-2.34152px);
+    /* Just to be fancy heh heh */
+}
+
+nav input {
+    transition: .3s;
+    background-image: url(search.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 15px 50%;
+    width: 200px;
+}
+
+nav input:focus, .headcontentyeah .frontbutton:active, .threebuttons .bluebtn:active {
+    transform: translateY(1.182715px);
+    /* hee hee */
+}
+
+nav {
+    padding: 30px 100px;
+    position: fixed;
+    width: calc(100% - 200px);
+    transition: .3s;
+    background: white;
+    z-index: 1000;
+}
+
+nav .content {
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    display: flex;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    position: absolute;
+    align-content: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.ca {
+    position: relative;
+    cursor: pointer;
+    --timing: ease-out;
+    transition: .3s var(--timing);
+}
+
+.ca::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: rgb(41, 41, 41);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    transition: -webkit-transform .3s var(--timing);
+    transition: transform .6s var(--timing);
+    transition: transform .6s var(--timing),-webkit-transform .3s var(--timing);
+}
+
+.ca:hover::after {
+	transform: scaleX(1);
+}
+
+nav input {
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    padding-left: 40px;
+}
+
+nav .linkcont {
+    width: 300px;
+    height: 34.61px;
+    position: relative;
+}
+
+a {
+    cursor: pointer;
+}
+
+.fw {
+    width: 100%;
+}
+
+.header {
+    height: 20px;
+    padding: 300px 100px;
+    width: calc(100% - 200px);
+    padding-bottom: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.header .headcontentyeah {
+    width: 40vw;
+    min-width: 400px;
+    color: var(--blue);
+    position: relative;
+}
+
+.featuredstuff {
+    width: 100%;
+}
+
+.featuredstuff .fpslider {
+    width: 1150px;
+    height: 300px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featuredstuff .fpslider .fcontent {
+    padding: 35px 47.5px;
+    height: calc(100% - 70px);
+    position: relative;
+}
+
+.featuredstuff .fpslider .fcontent .cgrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: calc(100% - 95px);
+    position: absolute;
+    bottom: 35px;
+    grid-column-gap: 10px;
+}
+
+.featuredstuff .fpslider .fcontent .fgrid .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.featuredstuff .fpslider .fcontent .fgrid .item {
+    height: 100%;
+    width: 203px;
+}
+
+.fgrid h3, .fgrid h6, .fgrid img {
+    width: 100%;
+}
+
+.fgrid .item h3, .fgrid .item h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.loader {
+    position: fixed;
+    background: white;
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+    pointer-events: auto;
+    transition: .25s;
+    backdrop-filter: blur(150px);
+}
+
+.loader h1 {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.loader.done {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.headcontentyeah .frontbutton {
+    padding: 12px 24px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding-left: 48px;
+    transition: .3s;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 20px 50%;
+}
+
+.headcontentyeah .frontbutton.stars {
+    background-image: url(stars.svg);
+    background-size: 16px;
+}
+
+.headcontentyeah .frontbutton.lightning {
+    background-image: url(lightning.svg);
+    background-size: 10px;
+}
+
+.headcontentyeah h1 {
+    margin-bottom: 15px;
+}
+
+.headcontentyeah .frontbuttons {
+    cursor: default;
+}
+
+button {
+    outline: none;
+}
+
+.threebuttons {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.threebuttons .bluebtn {
+    height: 34px;
+    width: 150px;
+    border-radius: 100px;
+    background: var(--blue);
+    border: none;
+    color: white;
+    font-size: 12px;
+}
+
+.threebuttons .bluebtn:nth-child(2) {
+    margin: 0 20px;
+}
+
+button, a {
+    cursor: pointer;
+    transition: .3s;
+}
