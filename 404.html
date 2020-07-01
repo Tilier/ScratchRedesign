@@ -10,6 +10,7 @@ permalink: /404.html
         <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/KrjFYVc/Designs-7-3.png">
         <title>404 Error</title>
         <link href="https://uiwars.aquarial.ml/about.css" rel="stylesheet" type="text/css">
+        <link href="/index.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     </head>
 
@@ -19,26 +20,16 @@ permalink: /404.html
     var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
     if (n) {
       var element = `<div class="what" id="what">
-            <div class="what-c">
-                <h1>404 Error.</h1>
-                <p>Looks like you're in testone.</p>
-                <div class="home">
-                    <a href="/"><button href="index.html" class="backhome">Go back home</button></a>
-                </div>
-            </div>
-            <div class="img">
-                
-            </div>
             <iframe name="site" id="site" height="900" width="750"></iframe>
         </div>
         `
     } else {
       var element = `<div class="what" id="what">
             <div class="what-c">
-                <h1>Testing testing</h1>
-                <p>Looks like you're not in testone.</p>
+                <h1>404 Error.</h1>
+                <p>Oops! That's a 404.</p>
                 <div class="home">
-                    <a href="/"><button href="index.html" class="backhome">Go back home</button></a>
+                    <a href="/"><button href="/" class="frontbutton" style="background-image: none !important">Go back home</button></a>
                 </div>
             </div>
             <div class="img">
