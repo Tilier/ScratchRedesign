@@ -50,7 +50,7 @@ nav .logo {
     height: fit-content;
 }
 
-nav .logo:hover, nav input:hover, .ca:hover, .headcontentyeah .frontbutton:hover, .threebuttons .bluebtn:hover {
+nav .logo:hover, nav input:hover, .ca:hover, .frontbutton:hover, .threebuttons .bluebtn:hover {
     transform: translateY(-2.34152px);
     /* Just to be fancy heh heh */
 }
@@ -64,7 +64,7 @@ nav input {
     width: 200px;
 }
 
-nav input:focus, .headcontentyeah .frontbutton:active, .threebuttons .bluebtn:active {
+nav input:focus, .frontbutton:active, .threebuttons .bluebtn:active {
     transform: translateY(1.182715px);
     /* hee hee */
 }
@@ -240,7 +240,7 @@ a {
     pointer-events: none;
 }
 
-.headcontentyeah .frontbutton {
+.frontbutton {
     padding: 12px 24px;
     background-color: white;
     border: none;
@@ -253,12 +253,12 @@ a {
     background-position: 20px 50%;
 }
 
-.headcontentyeah .frontbutton.stars {
+.frontbutton.stars {
     background-image: url(stars.svg);
     background-size: 16px;
 }
 
-.headcontentyeah .frontbutton.lightning {
+.frontbutton.lightning {
     background-image: url(lightning.svg);
     background-size: 10px;
 }
