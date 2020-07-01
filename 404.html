@@ -16,8 +16,6 @@ permalink: /404.html
     <body>
         <script>
         var path = window.location.pathname;
-            clear();
-        window.setInterval(clear, 500);
     var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
     if (n) {
       var element = `<div class="what" id="what">
@@ -55,11 +53,7 @@ permalink: /404.html
     console.log(element);
             console.log(path);
             document.body.innerHTML = element + document.body.innerHTML;
-            document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("http://scratchredesign.ml/projects/","") + "/embed";
-            
-            function clear() {
-                console.clear();   
-            }
+            document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("http://scratchredesign.ml/projects","") + "/embed";
         </script>
     </body>
 </html>
