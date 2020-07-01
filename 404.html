@@ -19,10 +19,15 @@ permalink: /404.html
         var path = window.location.pathname;
     var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
     if (n) {
+        if (hrefvar[hrefvar.length - 1] == '/') {
+            window.location.href = window.location.href.replace("/","");  
+        } else {
       var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
         </div>
         `
+      }
+        
     } else {
       var element = `<div class="what" id="what">
             <div class="what-c">
@@ -40,9 +45,6 @@ permalink: /404.html
     }
     
             var hrefvar = window.location.href;
-    console.log(n);
-    console.log(element);
-            console.log(path);
             document.body.innerHTML = element + document.body.innerHTML;
             document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("http://scratchredesign.ml/projects","") + "/embed";
         </script>
