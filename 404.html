@@ -38,6 +38,10 @@ permalink: /404.html
         </div>
         `
     }
+            
+            if (hrefvar[hrefvar.length - 1] == '/') {
+             console.log('working');   
+            }
     
             var hrefvar = window.location.href;
             document.body.innerHTML = element + document.body.innerHTML;
