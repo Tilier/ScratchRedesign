@@ -1,5 +1,4 @@
 json();
-window.addEventListener('load', json);
 
 function json() {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/proxy/featured/", function(udata) {
