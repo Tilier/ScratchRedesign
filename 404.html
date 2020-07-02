@@ -17,16 +17,15 @@ permalink: /404.html
     <body>
         <script>
         var path = window.location.pathname;
-    var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
-            var b = (hrefvar[hrefvar.length - 1] == '/');
-    if (n) && (b) {
+        var b = (hrefvar[hrefvar.length - 1] == '/');
+        var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
+    if (n) {
+        if (b) {
+            console.log('hello, hello, hello!');
+        }
       var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
         </div>
-        `
-        
-    } else if (n) {
-        window.location.href = window.location.href.slice(0, -1);
     } else {
       var element = `<div class="what" id="what">
             <div class="what-c">
