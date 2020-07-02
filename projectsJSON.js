@@ -1,3 +1,7 @@
+json();
+window.addEventListener('load', json);
+
+function json() {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/proxy/featured/", function(udata) {
     var data = udata.curator_top_projects;
     console.log(data);
@@ -18,3 +22,4 @@ $.getJSON("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/proxy
         console.log('hi');
     };
 });
+};
