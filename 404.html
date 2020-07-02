@@ -17,10 +17,9 @@ permalink: /404.html
     <body>
         <script>
         var path = window.location.pathname;
-        var b = (hrefvar[hrefvar.length - 1] == '/');
         var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
     if (n) {
-        if (b) {
+        if (hrefvar[hrefvar.length - 1] == '/') {
             console.log('hello, hello, hello!');
         }
       var element = `<div class="what" id="what">
