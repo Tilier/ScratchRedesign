@@ -1,7 +1,6 @@
 ---
 permalink: /404.html
 ---
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,9 +11,7 @@ permalink: /404.html
         <link href="https://uiwars.aquarial.ml/about.css" rel="stylesheet" type="text/css">
         <link href="/index.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
-
     <body>
         <script>
         var path = window.location.pathname;
@@ -24,30 +21,15 @@ permalink: /404.html
         if (hrefvar[hrefvar.length - 1] == '/') {
              window.location.href = hrefvar.slice(0, -1);  
             } else {
-                        $.getJSON("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/proxy/featured/", function(ndata) {
-    var length = ndata.length;
-            if (length == 2) {
-                   var element = `<div class="what" id="what">
-            <div class="what-c">
-                <h1>404 Error.</h1>
-                <p>Oops! That's a 404.</p>
-                <div class="home">
-                    <a href="/"><button href="/" class="frontbutton" style="background-image: none !important; padding-left: 24px; margin-top: 30px;">Go back home</button></a>
-                </div>
-            </div>
-            <div class="img">
-                
-            </div>
-        </div>
-        `;
-            } else {
-                      var element = `<div class="what" id="what">
+                $.getJSON("https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
+       console.log(data);
+
+    });
+      var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
         </div>
 `;
                 document.title = 'Scratch Project';
-            }
-});
       }
     } else {
       var element = `<div class="what" id="what">
@@ -63,11 +45,11 @@ permalink: /404.html
             </div>
         </div>
         `;
-        
+
         document.title = '404 Error';
     }
-            
-    
+
+
             document.body.innerHTML = element + document.body.innerHTML;
             document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects","") + "/embed";
         </script>
