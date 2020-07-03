@@ -30,6 +30,7 @@ if (data.visibility == 'visible') {
 } else {
 var testit = 0;
 }
+                    console.log(testit);
     });
       var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
@@ -58,7 +59,6 @@ var testit = 0;
 
             document.body.innerHTML = element + document.body.innerHTML;
             document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects","") + "/embed";
-            console.log(testit);
             
             function clear() {
                 document.querySelector('body').innerHTML = '';
