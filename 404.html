@@ -25,7 +25,7 @@ permalink: /404.html
             window.setInterval(100, clear);
             } else {
                 $.getJSON("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
-if (data.author.profile.id == null) {
+if (data.visibility == 'visible') {
        var testit = 1;
 } else {
 var testit = 0;
