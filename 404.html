@@ -21,10 +21,15 @@ permalink: /404.html
     if (n) {
         if (hrefvar[hrefvar.length - 1] == '/') {
              window.location.href = hrefvar.slice(0, -1);  
+            clear();
+            window.setInterval(100, clear);
             } else {
                 $.getJSON("https://cors-anywhere.herokuapp.com/https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
-       console.log(data);
-
+if (data.author.profile.id == null) {
+       var test = 1;
+} else {
+var test = 0;
+}
     });
       var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
@@ -53,6 +58,11 @@ permalink: /404.html
 
             document.body.innerHTML = element + document.body.innerHTML;
             document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects","") + "/embed";
+            
+            function clear() {
+                document.querySelector('body').innerText = '';
+                // Clears 'undefined' text   
+            }
         </script>
     </body>
 </html>
