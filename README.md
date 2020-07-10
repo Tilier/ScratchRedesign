@@ -12,4 +12,4 @@ If you want to help us with our mission, you must:
   3. Agree to put a lot of effort in to this project - at least one commit per day.
   4. At least know HTML and CSS. We'd love it if we had some JavaScript coders on board also, though!
   
-If all of these apply to you, then you can join! Email tylerrosenblum2015@gmail.com.
+If all of these apply to you, then you can join! Leave an issue on the "Issues" tab.
