@@ -5,7 +5,7 @@ scrollfunc();
 window.addEventListener('scroll', scrollfunc);
 window.addEventListener('load', loaded);
 
-$.getJSON("https://api.scratch.mit.edu/proxy/featured", function(data) {
+$.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/proxy/featured", function(data) {
     w3.displayObject("curator", data);
         });
 
