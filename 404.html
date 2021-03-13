@@ -26,10 +26,10 @@ permalink: /404.html
             } else if(TestProjectId(hrefvar.replace("https://scratchredesign.ml/projects",""))){
                 $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
                 console.log('good');
-    });
+    };
             } else {
                 console.log('404');   
-            }
+            };
       var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
         </div>
