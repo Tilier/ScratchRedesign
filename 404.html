@@ -23,8 +23,8 @@ permalink: /404.html
              window.location.href = hrefvar.slice(0, -1);  
             clear();
             window.setInterval(100, clear);
-            } else if(TestProjectId(hrefvar.replace("https://scratchredesign.ml/projects/",""))){
-                $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
+            } else if(TestProjectId(hrefvar.replace("http://scratchredesign.ml/projects/",""))){
+                $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/projects" + hrefvar.replace("http://scratchredesign.ml/projects",""), function(data){
                 console.log('good');
     });
             } else {
@@ -56,7 +56,7 @@ permalink: /404.html
 
 
             document.body.innerHTML = element + document.body.innerHTML;
-            document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects","") + "/embed";
+            document.getElementById("site").src = "https://scratch.mit.edu/projects" + hrefvar.replace("http://scratchredesign.ml/projects","") + "/embed";
             
             function clear() {
                 document.querySelector('body').innerHTML = '';
