@@ -64,10 +64,15 @@ permalink: /404.html
             }
             
               function TestProjectId(pID) {
-    const id = pID;
-    const url = 'https://cors.bridged.cc/https://api.scratch.mit.edu/projects/' + id;
-    fetch(url, {method: 'HEAD'})
-        .then(response => { return response.ok; });
+
+    var http = new XMLHttpRequest();
+    http.open('HEAD', "https://api.scratch.mit.edu/projects/" + pID, false);
+    http.send();
+    if (http.status != 404)
+        console.log('good');
+    else
+        console.log('404');
+
 }}
         </script>
     </body>
