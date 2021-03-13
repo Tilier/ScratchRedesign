@@ -20,13 +20,10 @@
              window.location.href = hrefvar.slice(0, -1);  
             clear();
             window.setInterval(100, clear);
-            } else if(TestProjectId(hrefvar.replace("https://scratchredesign.ml/projects/",""))){
-                $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
-                console.log('good');
-    });
             } else {
-                console.log('404');   
-            };
+                $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/projects" + hrefvar.replace("https://scratchredesign.ml/projects",""), function(data){
+                
+    });
       var element = `<div class="what" id="what">
             <iframe name="site" id="site" height="900" width="750"></iframe>
         </div>
