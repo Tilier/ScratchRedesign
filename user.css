@@ -3,6 +3,17 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    font-family: "Gilroy", sans-serif;
+    color: black;
+    border-bottom: 2px rgba(0,0,0,0);
+}
+
+a:hover {
+    border-bottom: 2px rgba(0,0,0,1);
+}
+
 .topgrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
