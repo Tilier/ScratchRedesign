@@ -1,7 +1,13 @@
         var path = window.location.pathname;
         var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
         var hrefvar = window.location.href;
-        TestProjectId(hrefvar.replace("https://scratchredesign.ml/projects", ""));
+                    var http = new XMLHttpRequest();
+                    http.open('HEAD', "https://cors.bridged.cc/https://api.scratch.mit.edu/projects/" + hrefvar.replace("https://scratchredesign.ml/projects", ""), false);
+                    http.send();
+                    if (http.status != 404)
+                        console.log('good');
+                    else
+                        console.log('404');
         if (n) {
             if (hrefvar[hrefvar.length - 1] == '/') {
                 window.location.href = hrefvar.slice(0, -1);
