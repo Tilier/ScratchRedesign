@@ -8,6 +8,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 50px;
     padding: 20px;
+    color: black;
+}
+
+.topgrid p, .topgrid li {
+    font-size: 1em;
 }
 
 .topgrid>div {
