@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.topgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    padding: 20px;
+}
+
+.topgrid>div {
+    height: 300px;
+    border-radius: 20px;
+    background: rgb(231, 231, 231);
+    overflow: hidden;
+}
+
+.topgrid>div:not(.aboutworking) {
+    padding: 20px;
+}
+
+.aboutworking {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+    background: none !important;
+    height: 340px !important;
+}
+
+.aboutworking div {
+    border-radius: 20px;
+    background: rgb(231, 231, 231);
+    padding: 20px;
+}
+
+.aboutworking h1 {
+    font-size: 1.5em;
+}
+
+.activity {
+    padding: 20px;
+}
+
+.activity-stream {
+    list-style-type: none !important;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.topgrid p {
+    height: 108px;
+    overflow: scroll;
+}
