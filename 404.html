@@ -76,23 +76,12 @@
         
         $.getScript('/projectPage.js', function()
 {
-function TestProjectId(pID) {
 
-                    var http = new XMLHttpRequest();
-                    http.open('HEAD', "https://cors.bridged.cc/https://api.scratch.mit.edu/projects/" + pID, false);
-                    http.send();
-                    if (http.status != 404)
-                        console.log('good');
-                    else
-                        console.log('404');
-
-                }
 });
         } else if ((window.location.pathname.includes('users/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2)) {
             $.getScript('/userPage.js', function()
 {
-    // script is now loaded and executed.
-    // put your dependent JS here.
+
 });
         }
     </script>
