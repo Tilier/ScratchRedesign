@@ -1,4 +1,4 @@
-        loadNewContent(window.location.href.replace("https://scratchredesign.ml/users/", ""));
+        loadActivity(window.location.href.replace("https://scratchredesign.ml/users/", ""));
         getUserData(window.location.href.replace("https://scratchredesign.ml/users/", ""));
 document.body.innerHTML = `
 
