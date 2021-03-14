@@ -29,7 +29,7 @@
 
 .aboutworking {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: calc(50% - 5px) calc(50% - 5px);
     grid-row-gap: 10px;
     background: none !important;
     height: 340px !important;
