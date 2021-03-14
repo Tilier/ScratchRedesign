@@ -1,5 +1,5 @@
         loadNewContent();
-        getUserData("Aquarial");
+        getUserData(window.location.href.replace("https://scratchredesign.ml/users/", ""));
 document.body.innerHTML = `
 
     <div class="topgrid">
