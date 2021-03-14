@@ -14,7 +14,7 @@
 
 <body>
     <script>
-        var path = window.location.pathname;
+       /* var path = window.location.pathname;
         var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
         var hrefvar = window.location.href;
         if (n) {
@@ -47,7 +47,7 @@
                     `;
 
                     document.title = '404 Error';
-                } */
+                } 
 
 
                 document.body.innerHTML = element + document.body.innerHTML;
@@ -70,6 +70,21 @@
 
                 }
             }
+        } */
+        
+        if ((window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2)) {
+        
+        $.getScript('/projectPage.js', function()
+{
+    // script is now loaded and executed.
+    // put your dependent JS here.
+});
+        } else if ((window.location.pathname.includes('users/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2)) {
+            $.getScript('/userPage.js', function()
+{
+    // script is now loaded and executed.
+    // put your dependent JS here.
+});
         }
     </script>
 </body>
