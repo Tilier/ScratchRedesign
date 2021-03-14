@@ -1,6 +1,6 @@
         loadNewContent();
         getUserData("Aquarial");
-document.body.innerHTML = '    <div class="topgrid">
+document.body.innerHTML = `    <div class="topgrid">
         <div class="aboutworking">
             <div class="about">
                 <h1>About Me</h1>
@@ -17,7 +17,7 @@ document.body.innerHTML = '    <div class="topgrid">
         <div class="activity">
             <div id="ul2data"></div>
         </div>
-    </div>'
+    </div>`
         // use forEach to replace the first letter of each <li> with an <a> element that links to redesigned user page
 
 
