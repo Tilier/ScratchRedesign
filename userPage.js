@@ -46,7 +46,9 @@ document.body.innerHTML = `
 
         function getUserData(username) {
             $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/users/" + username, function(gudata) {
-                document.querySelector("#about").innerHTML = gudata.profile.bio.replace(/\n/g, "<br>").replace(/@([\w\s]*)(?:'.[^\s])*/g, "$1<a href=\"https://scratchredesign.ml/users/$2\">@$2</a>$3");
-                document.querySelector("#working").innerHTML = gudata.profile.status.replace(/\n/g, "<br>").replace(/@([\w\s]*)(?:'.[^\s])*/g, "$1<a href=\"https://scratchredesign.ml/users/$2\">@$2</a>$3");
+                    const regex = /@([\w\s]*)(?:[^\.'].[^\s])*/g;
+                    
+                document.querySelector("#about").innerHTML = gudata.profile.bio.replace(/\n/g, "<br>").replaceAll(regex, '<a href="example.com/users/$1">$&</a>');
+                document.querySelector("#working").innerHTML = gudata.profile.status.replace(/\n/g, "<br>").replaceAll(regex, '<a href="example.com/users/$1">$&</a>');
             });
         }
