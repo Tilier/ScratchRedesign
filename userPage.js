@@ -47,8 +47,9 @@ document.body.innerHTML = `
         function getUserData(username) {
             $.getJSON("https://cors.bridged.cc/https://api.scratch.mit.edu/users/" + username, function(gudata) {
                     const regex = /@([\w\s\d_-]*)(?:[^\.'<\bbr\b/*>].[^\s])*/g;
+                   
                     
-                document.querySelector("#about").innerHTML = gudata.profile.bio.replace(/\n/g, "<br>").replaceAll(regex, '<a href="example.com/users/$1">$&</a>');
-                document.querySelector("#working").innerHTML = gudata.profile.status.replace(/\n/g, "<br>").replaceAll(regex, '<a href="example.com/users/$1">$&</a>');
+                document.querySelector("#about").innerHTML = gudata.profile.bio.replace(/\n/g, "<br>").replaceAll(regex, '<a href="https://scratchredesign.ml/users/$1">$&</a>');
+                document.querySelector("#working").innerHTML = gudata.profile.status.replace(/\n/g, "<br>").replaceAll(regex, '<a href="https://scratchredesign.ml/users/$1">$&</a>');
             });
         }
