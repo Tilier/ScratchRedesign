@@ -1,4 +1,4 @@
-        loadNewContent();
+        loadNewContent(window.location.href.replace("https://scratchredesign.ml/users/", ""));
         getUserData(window.location.href.replace("https://scratchredesign.ml/users/", ""));
 document.body.innerHTML = `
 
@@ -24,8 +24,8 @@ document.body.innerHTML = `
         // use forEach to replace the first letter of each <li> with an <a> element that links to redesigned user page
 
 
-        function loadNewContent() {
-            $.ajax("https://cors.bridged.cc/https://scratch.mit.edu/messages/ajax/user-activity/?user=Za-Chary&max=5", {
+        function loadActivity(username) {
+            $.ajax("https://cors.bridged.cc/https://scratch.mit.edu/messages/ajax/user-activity/?user=" + username + "&max=5", {
                 success: function(response) {
                     $("#ul2data").html(response);
                 }
