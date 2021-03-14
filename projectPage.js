@@ -1,6 +1,7 @@
         var path = window.location.pathname;
         var n = (window.location.pathname.includes('projects/')) && (window.location.pathname.split("/").filter(a => a.length > 0).length == 2);
         var hrefvar = window.location.href;
+        TestProjectId(hrefvar.replace("https://scratchredesign.ml/projects", ""));
         if (n) {
             if (hrefvar[hrefvar.length - 1] == '/') {
                 window.location.href = hrefvar.slice(0, -1);
