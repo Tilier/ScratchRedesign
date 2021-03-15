@@ -23,6 +23,14 @@ document.body.innerHTML = `
 `
         // use forEach to replace the first letter of each <li> with an <a> element that links to redesigned user page
 
+$('#about').each(function() { 
+  $(this).html($(this).html().replace(/(?:(https?\:\/\/[^\s]+))/m, '<a href="$1">$1</a>'));
+});
+
+$('#working').each(function() { 
+  $(this).html($(this).html().replace(/(?:(https?\:\/\/[^\s]+))/m, '<a href="$1">$1</a>'));
+});
+
 
         function loadActivity(username) {
             $.ajax("https://cors.bridged.cc/https://scratch.mit.edu/messages/ajax/user-activity/?user=" + username + "&max=5", {
