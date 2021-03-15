@@ -23,13 +23,6 @@ document.body.innerHTML = `
 `
         // use forEach to replace the first letter of each <li> with an <a> element that links to redesigned user page
 
-$('#about').each(function() { 
-  $(this).html($(this).html().replace(/(?:(https?\:\/\/[^\s]+))/m, '<a href="$1">$1</a>'));
-});
-
-$('#working').each(function() { 
-  $(this).html($(this).html().replace(/(?:(https?\:\/\/[^\s]+))/m, '<a href="$1">$1</a>'));
-});
 
 
         function loadActivity(username) {
@@ -57,7 +50,16 @@ $('#working').each(function() {
                     const regex = /@([\w\d_-]*)(?:[^\.'<\bbr\b/*>\s])*/g;
                    
                     
-                document.querySelector("#about").innerHTML = gudata.profile.bio.replace(/\n/g, "<br>").replaceAll(regex, '<a href="https://scratchredesign.ml/users/$1">$&</a>');
-                document.querySelector("#working").innerHTML = gudata.profile.status.replace(/\n/g, "<br>").replaceAll(regex, '<a href="https://scratchredesign.ml/users/$1">$&</a>');
+                document.querySelector("#about").innerHTML = urlify(gudata.profile.bio.replace(/\n/g, "<br>").replaceAll(regex, '<a href="https://scratchredesign.ml/users/$1">$&</a>'));
+                document.querySelector("#working").innerHTML = urlify(gudata.profile.status.replace(/\n/g, "<br>").replaceAll(regex, '<a href="https://scratchredesign.ml/users/$1">$&</a>'));
             });
         }
+
+function urlify(text) {
+  var urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.replace(urlRegex, function(url) {
+    return '<a href="' + url + '">' + url + '</a>';
+  })
+  // or alternatively
+  // return text.replace(urlRegex, '<a href="$1">$1</a>')
+}
