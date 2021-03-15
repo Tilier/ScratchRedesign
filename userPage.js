@@ -56,7 +56,7 @@ document.body.innerHTML = `
         }
 
 function urlify(text) {
-  var urlRegex = /(https?:\/\/[^\s]+)/g;
+  var urlRegex = /(https?:\/\/[^\s\b<br>\b]]+)/g;
   return text.replace(urlRegex, function(url) {
     return '<a href="' + url + '">' + url + '</a>';
   })
